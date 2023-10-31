@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\blockchain_test_API.props" />
+</Project>

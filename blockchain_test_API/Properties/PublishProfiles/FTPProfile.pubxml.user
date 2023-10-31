@@ -1,0 +1,61 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+https://go.microsoft.com/fwlink/?LinkID=208121.
+-->
+<Project>
+  <PropertyGroup>
+    <TimeStampOfAssociatedLegacyPublishXmlFile />
+    <EncryptedPassword>
+    </EncryptedPassword>
+    <_PublishTargetUrl>ftp://37.140.195.217/var/www/www-root/data/www/prototype.uniblockchain.ru</_PublishTargetUrl>
+    <History>False|2023-10-17T11:42:01.6805472Z;False|2023-10-17T14:38:11.6485203+03:00;False|2023-10-17T14:37:31.2277004+03:00;</History>
+    <LastFailureDetails />
+  </PropertyGroup>
+  <ItemGroup>
+    <File Include="appsettings.Development.json">
+      <publishTime>09/25/2023 11:07:43</publishTime>
+    </File>
+    <File Include="appsettings.json">
+      <publishTime>09/25/2023 11:07:43</publishTime>
+    </File>
+    <File Include="blockchain_prototype.dll">
+      <publishTime>10/17/2023 11:59:53</publishTime>
+    </File>
+    <File Include="blockchain_prototype.pdb">
+      <publishTime>10/17/2023 11:59:53</publishTime>
+    </File>
+    <File Include="blockchain_test_API.deps.json">
+      <publishTime>10/17/2023 14:40:28</publishTime>
+    </File>
+    <File Include="blockchain_test_API.dll">
+      <publishTime>10/17/2023 14:40:28</publishTime>
+    </File>
+    <File Include="blockchain_test_API.exe">
+      <publishTime>10/17/2023 14:40:28</publishTime>
+    </File>
+    <File Include="blockchain_test_API.pdb">
+      <publishTime>10/17/2023 14:40:28</publishTime>
+    </File>
+    <File Include="blockchain_test_API.runtimeconfig.json">
+      <publishTime>10/17/2023 14:36:29</publishTime>
+    </File>
+    <File Include="Microsoft.EntityFrameworkCore.Abstractions.dll">
+      <publishTime>08/09/2023 19:35:30</publishTime>
+    </File>
+    <File Include="Newtonsoft.Json.dll">
+      <publishTime>03/08/2023 10:09:54</publishTime>
+    </File>
+    <File Include="Swashbuckle.AspNetCore.Swagger.dll">
+      <publishTime>01/11/2023 09:48:20</publishTime>
+    </File>
+    <File Include="Swashbuckle.AspNetCore.SwaggerGen.dll">
+      <publishTime>01/11/2023 09:48:24</publishTime>
+    </File>
+    <File Include="Swashbuckle.AspNetCore.SwaggerUI.dll">
+      <publishTime>01/11/2023 09:49:02</publishTime>
+    </File>
+    <File Include="web.config">
+      <publishTime>10/17/2023 14:40:37</publishTime>
+    </File>
+  </ItemGroup>
+</Project>
