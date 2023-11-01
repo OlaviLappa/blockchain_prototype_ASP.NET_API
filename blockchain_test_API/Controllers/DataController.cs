@@ -75,7 +75,6 @@ namespace Blockch_test_API.Controllers
             Transaction transaction = new Transaction(wallet);
             ITransaction additional = new Hex();
 
-
             Signature<ITransaction> sign = new Signature<ITransaction>(additional);
             byte[] signature = sign.SignTransaction(transaction, wallet.PrivateKeyHex);
             transaction.Signature = signature;*/

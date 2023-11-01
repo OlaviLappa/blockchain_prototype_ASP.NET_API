@@ -1,10 +1,7 @@
 ﻿using blockchain_prototype;
 using blockchain_prototype.Entities;
 using blockchain_prototype.Transaction;
-using blockchain_test_API.Data;
 using Microsoft.AspNetCore.Mvc;
-using System.Reflection.Metadata.Ecma335;
-using System.Threading.Tasks;
 
 namespace blockchain_test_API.Controllers
 {
