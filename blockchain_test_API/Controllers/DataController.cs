@@ -51,39 +51,4 @@ namespace Blockch_test_API.Controllers
             }
         }
     }
-
-    [Route("blockchain/api/create-transaction")]
-    [ApiController]
-    public class TransactionController : ControllerBase
-    {
-        private readonly SystemInitialization _systemInitialization;
-
-        public TransactionController(SystemInitialization systemInitialization)
-        {
-            _systemInitialization = systemInitialization;
-        }
-
-        [HttpPost]
-        public async Task<IActionResult> AddTransaction()
-        {
-            ///// ДАННЫЙ КОД ПРЕДСТАВЛЕН В РАМКАХ ТЕСТИРОВАНИЯ!
-
-            //Я допустим создал новый кошелёк и сгенерировалась мне такая прикольная фраза
-            /*WalletHelper walletHelper = new WalletHelper();
-            Wallet wallet = walletHelper.CreateNewWallet().Item1;
-
-            Transaction transaction = new Transaction(wallet);
-            ITransaction additional = new Hex();
-
-            Signature<ITransaction> sign = new Signature<ITransaction>(additional);
-            byte[] signature = sign.SignTransaction(transaction, wallet.PrivateKeyHex);
-            transaction.Signature = signature;*/
-
-            await _systemInitialization.Launch();
-
-            await Task.Delay(2000);
-
-            return Ok("Транзакция успешно добавлена в пул.");
-        }
-    }
 }
