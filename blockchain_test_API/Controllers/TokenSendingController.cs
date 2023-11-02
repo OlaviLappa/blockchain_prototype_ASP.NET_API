@@ -21,8 +21,8 @@ namespace blockchain_test_API.Controllers
             _walletHelper = walletHelper;
         }
 
-        [HttpGet]
-        public async Task<IActionResult> SendToken(string from, string to, decimal amount)
+        [HttpPost]
+        public async Task<IActionResult> SendToken(Wallet from, string to, decimal amount)
         {
             _transactionSending = new TransactionSending(_systemInitialization.AddTransactionToPool);
             string msg = await _walletHelper.TrySignTransaction(from, to, amount, _transactionSending);

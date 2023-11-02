@@ -84,19 +84,19 @@ namespace blockchain_test_API.Modules
             }
         }
 
-        public async Task<string> TrySignTransaction(string from, string to, decimal amount, TransactionSending transactionSend)
+        public async Task<string> TrySignTransaction(Wallet from, string to, decimal amount, TransactionSending transactionSend)
         {
             string message = string.Empty;
             string failMessage = "Fail!";
 
-            Wallet senderWallet = new Wallet();
+            Wallet senderWallet = from;
             Wallet recepientWallet = new Wallet();
             Random rand = new Random();
 
-            bool fromAddress = CheckAddress(from);
+            bool fromAddress = CheckAddress(from.Address);
             bool toAddress = CheckAddress(to);
 
-            if (from == to)
+            if (from.Address == to)
             {
                 message = "Перевод на один и тот же адрес невозможен";
                 await Task.Delay(5000);
@@ -106,10 +106,7 @@ namespace blockchain_test_API.Modules
 
             if (fromAddress && toAddress)
             {
-                senderWallet.Address = from;
                 recepientWallet.Address = to;
-                senderWallet.PrivateKeyHex = "24bfc73dee31400b36b7be5472ce290a4b49f88571f2effc046a8b8960283352";
-                senderWallet.PublicKeyHex = "5030937adc53413b7ed0fba9f081fbc9fc25b3b2b39543a87d09472e9f8eefc70a8f303ea283b2b6d0d80ad8e6ca28ef0afabfdf4a6e4efcf2ffa1cda5f5ac82";
 
                 senderWallet.Balance = new BalanceHandler().GetCurrentBalance(senderWallet);
                 recepientWallet.Balance = new BalanceHandler().GetCurrentBalance(recepientWallet);
