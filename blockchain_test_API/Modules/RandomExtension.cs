@@ -1,6 +1,4 @@
-﻿using System.Collections.Generic;
-
-namespace blockchain_test_API.Modules
+﻿namespace blockchain_test_API.Modules
 {
     public static class RandomExtension
     {
