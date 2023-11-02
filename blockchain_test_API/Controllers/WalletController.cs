@@ -1,5 +1,4 @@
-﻿using blockchain_prototype;
-using blockchain_prototype.Entities;
+﻿using blockchain_prototype.Entities;
 using blockchain_test_API.Modules;
 using Microsoft.AspNetCore.Mvc;
 
@@ -9,20 +8,18 @@ namespace blockchain_test_API.Controllers
     [Route("blockchain/api/create-new-wallet")]
     public class WalletController : Controller
     {
-        private readonly SystemInitialization _systemInitialization;
+        private WalletHelper _walletHelper;
 
-        public WalletController(SystemInitialization systemInitialization)
+        public WalletController(WalletHelper walletHelper)
         {
-            _systemInitialization = systemInitialization;
+            _walletHelper = walletHelper;
         }
 
         [HttpPost]
         public async Task<IActionResult> GetSeedNumbers()
         {
-            WalletHelper walletHelper = new WalletHelper();
-
-            Wallet wallet = walletHelper.CreateNewWallet().Item1;
-            List<string> seedPhrase = walletHelper.CreateNewWallet().Item2;
+            Wallet wallet = _walletHelper.CreateNewWallet().Item1;
+            List<string> seedPhrase = _walletHelper.CreateNewWallet().Item2;
 
             await Task.Delay(2000);
 

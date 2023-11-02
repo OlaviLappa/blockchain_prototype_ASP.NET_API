@@ -6,7 +6,7 @@ namespace blockchain_test_API.Data
     {
         public string[] GetAllPublicKeys()
         {
-            string[] allPublicKeys = new string[10000];
+            string[] allPublicKeys = new string[1000];
 
             using (StreamReader reader = new StreamReader("Data/public-keys.txt"))
             {
@@ -14,6 +14,23 @@ namespace blockchain_test_API.Data
                 {
                     allPublicKeys[i] = reader.ReadLine();
                 }
+            }
+
+            return allPublicKeys;
+        }
+
+        public async Task<string[]> GetAllPublicKeysAsync()
+        {
+            string[] allPublicKeys;
+
+            try
+            {
+                allPublicKeys = await File.ReadAllLinesAsync("Data/public-keys.txt");
+            }
+
+            catch (Exception ex)
+            {
+                throw new Exception($"Error at file reading: {ex.Message}");
             }
 
             return allPublicKeys;
