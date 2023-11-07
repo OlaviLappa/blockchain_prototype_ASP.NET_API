@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "d2f8G6uF0UgZEPvSJKRh9uGPyXnKX/N3ZgQ7zuPZaENj7cMqL/gLKJ3whDZ3JLiwrwblspb5X1bZpoNW779Gxw==",
+  "dgSpecHash": "k0xup2dNJnMS0hOPxrAA1Xs586qKGLmf3PhyNx2PYgEnp1PReigoXfOpsTs/sUWi8t0MSsM1BJl0s3lg2OTfkw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\olavi\\uniblock\\blockchain_test_API\\blockchain_prototype_ASP.NET_API\\blockchain_test_API\\blockchain_test_API.csproj",
+  "projectFilePath": "C:\\Users\\olavi\\uniblock\\BlockchainsProjects\\blockchain_prototype_ASP.NET_API\\blockchain_test_API\\blockchain_test_API.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\olavi\\.nuget\\packages\\microsoft.aspnetcore.cors\\2.2.0\\microsoft.aspnetcore.cors.2.2.0.nupkg.sha512",
     "C:\\Users\\olavi\\.nuget\\packages\\microsoft.aspnetcore.http.abstractions\\2.2.0\\microsoft.aspnetcore.http.abstractions.2.2.0.nupkg.sha512",
