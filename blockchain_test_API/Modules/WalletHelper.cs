@@ -36,9 +36,19 @@ namespace blockchain_test_API.Modules
             }
         }
 
+        public decimal GetBalance(string address)
+        {
+            Wallet wallet = new Wallet();
+            wallet.Address = address;
+
+            BalanceHandler balanceHandler = new BalanceHandler();
+
+            return balanceHandler.GetCurrentBalance(wallet);
+        }
+
         public async Task<Wallet> RecoveryWalletAsync<T>(T type)
         {
-            string message = "";
+            WalletStatus status = WalletStatus.Awaiting;
 
             List<string> seedPhraseToList = new List<string>();
 
@@ -63,17 +73,17 @@ namespace blockchain_test_API.Modules
             {
                 if (allPublicKeys[i] == wallet.PublicKeyHex)
                 {
-                    message = "Кошелёк восстановлен!";
+                    status = WalletStatus.Restored;
                     break;
                 }
 
                 else
                 {
-                    message = "Необходимый ключ не найден";
+                    status = WalletStatus.DoesNotExist;
                 }
             }
 
-            if(message == "Кошелёк восстановлен!")
+            if(status == WalletStatus.Restored)
             {
                 return wallet;
             }
