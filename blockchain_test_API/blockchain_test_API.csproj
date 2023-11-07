@@ -7,6 +7,17 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="Modules\Interfaces\**" />
+    <Content Remove="Modules\Interfaces\**" />
+    <EmbeddedResource Remove="Modules\Interfaces\**" />
+    <None Remove="Modules\Interfaces\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="Modules\WalletHelper.cs~RF1a65ef4.TMP" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.Cors" Version="2.2.0" />
     <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
     <PackageReference Include="Swashbuckle.AspNetCore" Version="6.5.0" />
@@ -16,10 +27,6 @@
     <Reference Include="blockchain_prototype">
       <HintPath>..\..\..\Blockchain_prototype\blockchain_prototype\bin\Debug\net6.0\blockchain_prototype.dll</HintPath>
     </Reference>
-  </ItemGroup>
-
-  <ItemGroup>
-    <Folder Include="Modules\Interfaces\" />
   </ItemGroup>
 
 </Project>

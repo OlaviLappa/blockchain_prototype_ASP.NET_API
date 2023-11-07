@@ -22,10 +22,18 @@ namespace blockchain_test_API.Controllers
         }
 
         [HttpPost]
-        public async Task<IActionResult> SendToken(Wallet from, string to, decimal amount)
+        public async Task<IActionResult> SendToken([FromBody] TokenTransferRequest request)
         {
+            Wallet senderWallet = new Wallet()
+            {
+                Address = request.FromAddress,
+                PrivateKeyHex = request.SenderPrivateKey,
+                PublicKeyHex = request.SenderPublicKey,
+                Balance = request.SenderBalance
+            };
+
             _transactionSending = new TransactionSending(_systemInitialization.AddTransactionToPool);
-            string msg = await _walletHelper.TrySignTransaction(from, to, amount, _transactionSending);
+            string msg = await _walletHelper.TrySignTransaction(senderWallet, request.ToAddress, request.Amount, _transactionSending);
 
             return Json(msg);
         }
